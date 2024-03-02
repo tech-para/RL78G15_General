@@ -1,0 +1,45 @@
+-MAKEUD="C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\HardwareDebug/RL78G15_General_l.ud" 
+-device="C:/Users/yu_pr/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F12068.DVF" 
+-list 
+-nooptimize 
+-entry=_start 
+-auto_section_layout 
+-security_id=00000000000000000000 
+-debug_monitor=01E00-01FFF 
+-user_opt_byte=EFF7F9 
+-ocdbg=85 
+-input=".\src/smc_gen/r_bsp/board/generic_rl78_g15\stkinit.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\cstart.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_common_ccrl.obj"
+-input=".\src\RL78G15_General.obj"
+-input=".\src/smc_gen/ADC\ADC.obj"
+-input=".\src/smc_gen/ADC\ADC_user.obj"
+-input=".\src/smc_gen/IO_PORT\IO_PORT.obj"
+-input=".\src/smc_gen/IO_PORT\IO_PORT_user.obj"
+-input=".\src/smc_gen/Interrupt\Interrupt.obj"
+-input=".\src/smc_gen/Interrupt\Interrupt_user.obj"
+-input=".\src/smc_gen/Pwm\Pwm.obj"
+-input=".\src/smc_gen/Pwm\Pwm_user.obj"
+-input=".\src/smc_gen/UART0\UART0.obj"
+-input=".\src/smc_gen/UART0\UART0_user.obj"
+-input=".\src/smc_gen/general\r_cg_ad_common.obj"
+-input=".\src/smc_gen/general\r_cg_sau_common.obj"
+-input=".\src/smc_gen/general\r_cg_systeminit.obj"
+-input=".\src/smc_gen/general\r_cg_tau_common.obj"
+-input=".\src/smc_gen/interval_timer\interval_timer.obj"
+-input=".\src/smc_gen/interval_timer\interval_timer_user.obj"
+-input=".\src/smc_gen/r_bsp/board/generic_rl78_g15\hdwinit.obj"
+-input=".\src/smc_gen/r_bsp/board/generic_rl78_g15\r_bsp_init.obj"
+-input=".\src/smc_gen/r_bsp/mcu/all\r_bsp_common.obj"
+-input=".\src/smc_gen/r_bsp/mcu/rl78_g15\mcu_clocks.obj"
+-input=".\src/smc_gen/r_pincfg\Pin.obj"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_1\lib\rl78nm4s99.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_1\lib\rl78nm4r.lib"
+-library="C:\Program Files (x86)\Renesas\RL78\1_12_1\lib\malloc_n.lib"
+-output="RL78G15_General.abs" 
+-debug 
+-nocompress 
+-memory=high 
+-rom=.data=.dataR,.sdata=.sdataR 
+-nomessage 
+-nologo

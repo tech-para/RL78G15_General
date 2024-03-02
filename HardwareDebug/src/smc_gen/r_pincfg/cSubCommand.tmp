@@ -1,0 +1,19 @@
+-cpu=S2
+-use_mda=not_use
+-c
+-dev="C:/Users/yu_pr/.eclipse/com.renesas.platform_1435879475/DebugComp/RL78/RL78/Common/DR5F12068.DVF"
+-MAKEUD="C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\HardwareDebug\src\smc_gen\r_pincfg"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\r_pincfg"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\r_config"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\general"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\r_bsp"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\IO_PORT"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\UART0"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\ADC"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\Interrupt"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\Pwm"
+-I "C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\src\smc_gen\interval_timer"
+-character_set=utf8
+-lang=c99
+-g

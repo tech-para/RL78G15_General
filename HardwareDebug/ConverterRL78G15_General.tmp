@@ -1,0 +1,6 @@
+-MAKEUD="C:\Users\yu_pr\e2_studio\workspace\RL78G15_General\HardwareDebug\\RL78G15_General_c.ud" 
+-form=stype 
+-output="RL78G15_General.mot" 
+-byte_count=10 
+-nomessage 
+-nologo
