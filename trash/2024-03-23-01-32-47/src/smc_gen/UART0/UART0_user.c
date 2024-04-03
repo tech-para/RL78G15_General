@@ -203,7 +203,7 @@ void uart_send(char* send_data){
 	}
 }
 void uart_receive(char* receive_data){
-	R_UART0_Receive((uint8_t*)receive_data,3);
+	R_UART0_Receive((uint8_t*)receive_data,1);//3
 	while(1){
 		if(uart_receive_status==1){
 			uart_receive_status=0;
@@ -214,4 +214,5 @@ void uart_receive(char* receive_data){
 		}
 	}
 }
+
 /* End user code. Do not edit comment generated here */

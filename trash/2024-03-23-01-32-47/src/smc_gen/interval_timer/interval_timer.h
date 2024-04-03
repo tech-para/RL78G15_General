@@ -18,89 +18,42 @@
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
-* File Name        : interval_timer_user.c
+* File Name        : interval_timer.h
 * Component Version: 1.4.0
 * Device(s)        : R5F12068xSP
 * Description      : This file implements device driver for interval_timer.
 ***********************************************************************************************************************/
+
 /***********************************************************************************************************************
 Includes
 ***********************************************************************************************************************/
-#include "r_cg_macrodriver.h"
-#include "r_cg_userdefine.h"
-#include "interval_timer.h"
-/* Start user code for include. Do not edit comment generated here */
-/* End user code. Do not edit comment generated here */
+#include "r_cg_tau.h"
+
+#ifndef CFG_interval_timer_H
+#define CFG_interval_timer_H
 
 /***********************************************************************************************************************
-Pragma directive
+Macro definitions (Register bit)
 ***********************************************************************************************************************/
-#pragma interrupt r_interval_timer_interrupt(vect=INTTM01)
-/* Start user code for pragma. Do not edit comment generated here */
-/* End user code. Do not edit comment generated here */
 
 /***********************************************************************************************************************
-Global variables and functions
+Macro definitions
 ***********************************************************************************************************************/
-/* Start user code for global. Do not edit comment generated here */
-volatile uint32_t count=0;
-/* End user code. Do not edit comment generated here */
+#define _009F_TAU_TDR01_VALUE               (0x009FU)    /* 16-bit timer data register 01 (TDR01) */
 
 /***********************************************************************************************************************
-* Function Name: R_interval_timer_Create_UserInit
-* Description  : This function adds user code after initializing the TAU0 channel 1.
-* Arguments    : None
-* Return Value : None
+Typedef definitions
 ***********************************************************************************************************************/
-void R_interval_timer_Create_UserInit(void)
-{
-    /* Start user code for user init. Do not edit comment generated here */
-    /* End user code. Do not edit comment generated here */
-}
 
 /***********************************************************************************************************************
-* Function Name: r_interval_timer_interrupt
-* Description  : This function is INTTM01 interrupt service routine.
-* Arguments    : None
-* Return Value : None
+Global functions
 ***********************************************************************************************************************/
-static void __near r_interval_timer_interrupt(void)
-{
-    /* Start user code for r_interval_timer_interrupt. Do not edit comment generated here */
-	count++;
-    /* End user code. Do not edit comment generated here */
-}
-
-/* Start user code for adding. Do not edit comment generated here */
-void us_wait(uint32_t wait_time){
-	TDR01 = 0x000FU;
-	R_interval_timer_Start();
-	while(1){
-		if(count==wait_time){
-			count=0;
-			break;
-		}
-		else{
-			;
-		}
-	}
-	R_interval_timer_Stop();
-	return ;
-}
-
-void ms_wait(uint32_t wait_time){
-    TDR01 = 0x3E7FU;
-    R_interval_timer_Start();
-	while(1){
-		if(count==wait_time){
-			count=0;
-			break;
-		}
-		else{
-			;
-		}
-	}
-	R_interval_timer_Stop();
-	return ;
-}
+void R_interval_timer_Create (void);
+void R_interval_timer_Start (void);
+void R_interval_timer_Stop (void);
+void R_interval_timer_Create_UserInit (void);
+/* Start user code for function. Do not edit comment generated here */
+void us_wait(uint32_t);
+void ms_wait(uint32_t);
 /* End user code. Do not edit comment generated here */
+#endif
